@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368193394602",
+    "project_id": "auctioninginfoapp-d6f38",
+    "storage_bucket": "auctioninginfoapp-d6f38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368193394602:android:f74758db5792ab7fe77dd3",
+        "android_client_info": {
+          "package_name": "com.example.auctioninginfoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBMOLJFkQjKP-pNNGeQvilWl1nSOjPhdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

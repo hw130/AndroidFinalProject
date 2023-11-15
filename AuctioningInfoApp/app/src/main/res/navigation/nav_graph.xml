@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.auctioninginfoapp.login.SplashFragment"
+        android:label="splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.auctioninginfoapp.user.UserFragment"
+        android:label="사용자 정보"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.auctioninginfoapp.login.LoginFragment"
+        android:label="로그인"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.auctioninginfoapp.login.RegisterFragment"
+        android:label="회원가입"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.auctioninginfoapp.search.SearchFragment"
+        android:label="가격검색"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_saveFragment"
+            app:destination="@id/saveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.auctioninginfoapp.result.ResultFragment"
+        android:label="검색결과"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="RESULT_AMOUNT"
+            app:argType="string" />
+        <argument
+            android:name="SELECT_DATE"
+            app:argType="string" />
+        <argument
+            android:name="SELECT_FRUIT"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.example.auctioninginfoapp.local.SaveFragment"
+        android:label="저장 내역"
+        tools:layout="@layout/fragment_save" >
+        <argument
+            android:name="SAVE_ID"
+            app:argType="long" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:popUpTo="@id/searchFragment"
+        app:popUpToInclusive="true" />
+</navigation>
